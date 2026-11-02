@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Fondo redondeado orgánico -->
+  <rect width="120" height="120" rx="28" fill="#F7F5EF"/>
+  <!-- Símbolo hoja/río -->
+  <path d="M60 8C42 8 26 24 26 42c0 8 3 15 8 20L36 84l42-18L102 84l-10-14C104 66 108 60 108 42c0-28-22-34-48-34z" fill="#173D30"/>
+  <path d="M48 44c-6 0-11 5-11 11s5 11 11 11 11-5 11-11-5-11-11-11zM72 44c-6 0-11 5-11 11s5 11 11 11 11-5 11-11-5-11-11-11z" fill="#758B62"/>
+  <circle cx="60" cy="96" r="4" fill="#A77D58"/>
+  <text x="60" y="110" font-family="serif" font-size="9" fill="#A77D58" text-anchor="middle" letter-spacing="2">LA RIBERA</text>
+</svg>

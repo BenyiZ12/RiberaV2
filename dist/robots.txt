@@ -1,0 +1,25 @@
+# robots.txt — Centro Ecológico La Ribera
+# Dominio: https://www.laribera.cr (configurar con el dominio real del propietario)
+
+User-agent: *
+Allow: /
+
+# Rutas públicas indexables
+Allow: /
+Allow: /hospedaje
+Allow: /naturaleza
+Allow: /restaurante
+Allow: /galeria
+Allow: /ubicacion
+
+# Archivos estáticos permitidos
+Allow: /assets/
+Allow: /favicon.svg
+Allow: /og-image.svg
+Allow: /manifest.webmanifest
+
+# Rutas que no deben indexarse
+Disallow: /404
+
+# Sitemap
+Sitemap: https://www.laribera.cr/sitemap.xml

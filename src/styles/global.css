@@ -54,7 +54,7 @@
 
   a:focus-visible,
   button:focus-visible {
-    @apply outline outline-2 outline-forest outline-offset-3 rounded-sm;
+    @apply outline outline-2 outline-forest outline-offset-[3px] rounded-sm;
   }
 
   ::selection {

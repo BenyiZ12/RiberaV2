@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F7F5EF"/>
+  <!-- Elemento gráfico: hoja/río -->
+  <path d="M600 40C360 40 180 180 180 340c0 60 20 120 50 160L260 560l380-160L940 560l-40-56C960 460 1020 400 1020 340c0-240-160-300-380-300z" fill="#173D30"/>
+  <path d="M384 352c-48 0-88 40-88 88s40 88 88 88 88-40 88-88-40-88-88-88zM576 352c-48 0-88 40-88 88s40 88 88 88 88-40 88-88-40-88-88-88z" fill="#758B62"/>
+  <circle cx="480" cy="768" r="32" fill="#A77D58"/>
+  <!-- Tipografía -->
+  <text x="600" y="260" font-family="serif" font-size="96" font-weight="700" fill="#173D30" text-anchor="middle" letter-spacing="4">La Ribera</text>
+  <text x="600" y="340" font-family="sans-serif" font-size="32" font-weight="500" fill="#758B62" text-anchor="middle" letter-spacing="6">CENTRO ECOLÓGICO — PÉREZ ZELEDÓN, COSTA RICA</text>
+  <text x="600" y="390" font-family="sans-serif" font-size="24" fill="#A77D58" text-anchor="middle" letter-spacing="2">Naturaleza que se convierte en experiencia</text>
+</svg>

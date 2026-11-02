@@ -1,0 +1,50 @@
+﻿---
+import Button from '@/components/Button.astro';
+import ImagePlaceholder from '@/components/ImagePlaceholder.astro';
+interface Props {
+  title?: string;
+  subtitle?: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+  image?: string;
+  imageAlt?: string;
+  align?: 'center' | 'left';
+}
+
+const { title, subtitle, primaryLabel, primaryHref, secondaryLabel, secondaryHref, image, imageAlt, align = 'left' } = Astro.props;
+const justifyClass = align === 'center' ? 'justify-center' : 'justify-start';
+const textClass = align === 'center' ? 'text-center' : '';
+---
+
+<section class="reveal relative overflow-hidden py-24 lg:py-36">
+  <div class="container relative z-10">
+    <div class={`grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center ${textClass}`}>
+      <div>
+        {title && (
+          <h2 class="mb-6 tracking-tight leading-tight">{title}</h2>
+        )}
+        {subtitle && (
+          <p class="text-lg md:text-xl text-forest/80 mb-10 leading-relaxed">
+            {subtitle}
+          </p>
+        )}
+        <div class={`flex flex-col sm:flex-row gap-4 ${justifyClass}`}>
+          {primaryLabel && primaryHref && (
+            <Button variant="primary" as="a" href={primaryHref} label={primaryLabel} />
+          )}
+          {secondaryLabel && secondaryHref && (
+            <Button variant="outline" as="a" href={secondaryHref} label={secondaryLabel} />
+          )}
+        </div>
+      </div>
+      {image && imageAlt && (
+        <div class="reveal-image">
+          <ImagePlaceholder src={image} alt={imageAlt} ratio="16-9" />
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+

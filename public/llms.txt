@@ -1,0 +1,29 @@
+# llms.txt — Centro Ecológico La Ribera
+
+# Centro Ecológico La Ribera
+
+Centro de ecoturismo y hospedaje rural ubicado en Mollejones de Platanares, Pérez Zeledón, Costa Rica. Ofrece cabañas, piscinas, zonas verdes, senderos, restaurante y espacios para compartir en contacto con la naturaleza.
+
+Público: familias, parejas, grupos de amigos y personas que buscan tranquilidad y descanso.
+
+## Páginas del sitio
+
+- [Inicio](https://www.laribera.cr/) — Presentación del centro ecológico, entorno y experiencias principales.
+- [Hospedaje](https://www.laribera.cr/hospedaje) — Cabañas y opciones de hospedaje rural.
+- [Naturaleza](https://www.laribera.cr/naturaleza) — Zonas verdes, piscinas, senderos y entorno natural.
+- [Restaurante](https://www.laribera.cr/restaurante) — Propuesta gastronómica del establecimiento.
+- [Galería](https://www.laribera.cr/galeria) — Fotografías de instalaciones y entorno natural.
+- [Ubicación y contacto](https://www.laribera.cr/ubicacion) — Cómo llegar, información de contacto y WhatsApp.
+
+## Información de contacto
+
+- Dirección: Mollejones de Platanares, Pérez Zeledón, Costa Rica
+- Teléfono: pendiente de confirmación por el propietario (existen diferentes números publicados en directorios)
+- WhatsApp: pendiente de confirmación por el propietario
+- Correo electrónico: pendiente de confirmación por el propietario
+
+## Notas
+
+- No se simula un sistema de reservas; el flujo de consulta dirige al contacto oficial.
+- Fotografías oficiales pendientes de entrega por el propietario.
+- Dominio en producción: configurar con el sitio real contratado (no usar vercel.app).

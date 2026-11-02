@@ -1,8 +1,8 @@
----
+﻿---
 interface Props {
   style?: 'line' | 'leaf' | 'river';
 }
-</template>
+---
 
 <div class="divider my-16 lg:my-24 flex items-center justify-center">
   {Astro.props.style === 'river' && (
@@ -19,5 +19,3 @@ interface Props {
     <div class="w-32 h-[1px] bg-forest/30" />
   )}
 </div>
-
-</template>

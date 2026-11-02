@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
+import path from 'node:path';
 
 // TODO: Reemplazar 'https://www.laribera.cr' por el dominio real una vez confirmado por el propietario.
 // No usar vercel.app en producción.
@@ -12,5 +13,12 @@ export default defineConfig({
   },
   trailingSlash: 'never',
   compressHTML: true,
+  vite: {
+    resolve: {
+      alias: {
+        '@': path.resolve('./src'),
+      },
+    },
+  },
   // Los sourcemaps no se generan en build de Astro por defecto en producción (punto 17).
 });

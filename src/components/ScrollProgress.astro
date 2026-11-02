@@ -1,0 +1,39 @@
+﻿---
+interface Props {
+  color?: string;
+  height?: string;
+}
+---
+
+<progress
+  id="scroll-progress"
+  class="fixed top-0 left-0 right-0 h-1 z-[55] appearance-none border-none bg-forest/10 accent-forest"
+  value={0}
+  max={100}
+></progress>
+
+<style>
+  #scroll-progress::-webkit-progress-bar {
+    background-color: rgba(23, 61, 48, 0.1);
+  }
+  #scroll-progress::-webkit-progress-value {
+    background-color: #173D30;
+    transition: width 0.1s linear;
+  }
+</style>
+
+<script>
+  const progress = document.getElementById('scroll-progress');
+  function update() {
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrolled = height ? (winScroll / height) * 100 : 0;
+    progress.value = scrolled;
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+</script>

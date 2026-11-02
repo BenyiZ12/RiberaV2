@@ -1,0 +1,59 @@
+﻿---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SectionHead from '@/components/SectionHead.astro';
+import ImagePlaceholder from '@/components/ImagePlaceholder.astro';
+import Button from '@/components/Button.astro';
+import CTASection from '@/components/CTASection.astro';
+---
+
+<BaseLayout
+  title="Restaurante"
+  description="Propuesta gastronómica del Centro Ecológico La Ribera en Pérez Zeledón, Costa Rica."
+  canonical="/restaurante"
+>
+  <section class="section relative overflow-hidden">
+    <div class="container relative z-10">
+      <SectionHead
+        kicker="Restaurante"
+        title="Propuesta gastronómica"
+        subtitle="Sabores del sur de Costa Rica en un entorno de naturaleza y tranquilidad."
+        divider="leaf"
+      />
+
+      <div class="grid md:grid-cols-2 gap-16 lg:gap-24 items-center mt-20">
+        <div class="reveal">
+          <p class="text-lg md:text-xl text-forest/90 leading-relaxed mb-10">
+            El restaurante de La Ribera ofrece una propuesta gastronómica pensada para acompañar tu estadía. Platos elaborados con ingredientes locales en un ambiente rodeado de vegetación y silencio.
+          </p>
+          <ul class="space-y-6 font-body max-w-lg">
+            <li class="flex items-start gap-3">
+              <span class="text-earth mt-0.5">🍽️</span>
+              <span class="text-forest/90">Cocina de la región</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-earth mt-0.5">🌿</span>
+              <span class="text-forest/90">Ingredientes locales</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-earth mt-0.5">🥂</span>
+              <span class="text-forest/90">Espacios para compartir</span>
+            </li>
+          </ul>
+        </div>
+        <div class="reveal-image parallax" data-parallax data-speed="0.05">
+          <ImagePlaceholder src="" alt="Restaurante de Centro Ecológico La Ribera" ratio="4-3" class="shadow-2xl" />
+        </div>
+      </div>
+
+      <div class="mt-24 lg:mt-32 border-t border-forest/20 pt-16">
+        <div class="max-w-xl mx-auto text-center">
+          <p class="text-lg text-forest/80 mb-8 leading-relaxed">
+            El menú, precios y horarios de atención del restaurante se confirman directamente con el equipo de Centro Ecológico La Ribera.
+          </p>
+          <Button variant="primary" as="a" href="/ubicacion" label="Consultar disponibilidad" />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

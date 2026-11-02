@@ -1,0 +1,18 @@
+{
+  "name": "Centro Ecológico La Ribera",
+  "short_name": "La Ribera",
+  "description": "Centro de ecoturismo y hospedaje rural en Mollejones de Platanares, Pérez Zeledón, Costa Rica.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F5EF",
+  "theme_color": "#173D30",
+  "orientation": "portrait",
+  "lang": "es-CR",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
----
+﻿---
 import { SITE, SEO_DEFAULTS, CONTACT } from '@/config/site';
 import ScrollProgress from '@/components/ScrollProgress.astro';
 import Header from '@/components/Header.astro';
@@ -33,7 +33,7 @@ const pageCanonical = canonical ? absoluteUrl(canonical) : absoluteUrl(Astro.url
 const pageOgImage = absoluteUrl(ogImage);
 
 const isIndexable = !noIndex;
-</template>
+---
 
 <!DOCTYPE html>
 <html lang="es-CR">
@@ -52,7 +52,6 @@ const isIndexable = !noIndex;
 
     <link rel="canonical" href={pageCanonical} />
 
-    {/* Open Graph */}
     <meta property="og:type" content={ogType} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
@@ -61,13 +60,11 @@ const isIndexable = !noIndex;
     <meta property="og:locale" content={SEO_DEFAULTS.locale} />
     <meta property="og:site_name" content={SITE.name} />
 
-    {/* Twitter Cards */}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
     <meta name="twitter:image" content={pageOgImage} />
 
-    {/* Preconnect a fuentes de Google */}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -84,10 +81,7 @@ const isIndexable = !noIndex;
     </noscript>
 
     {structuredData && (
-      <script
-        type="application/ld+json"
-        set:html={JSON.stringify(structuredData)}
-      />
+      <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     )}
   </head>
   <body class="antialiased">
@@ -102,10 +96,10 @@ const isIndexable = !noIndex;
     </main>
     <Footer />
 
-    <script src="/scripts/scroll-reveal.js"></script>
-    <script src="/scripts/parallax.js"></script>
-    <script src="/scripts/mobile-menu.js"></script>
-    <script src="/scripts/lightbox.js"></script>
+    <script is:inline src="/scripts/scroll-reveal.js"></script>
+    <script is:inline src="/scripts/parallax.js"></script>
+    <script is:inline src="/scripts/mobile-menu.js"></script>
+    <script is:inline src="/scripts/lightbox.js"></script>
   </body>
 </html>
 
@@ -134,4 +128,3 @@ const isIndexable = !noIndex;
   }
 </style>
 
-</template>

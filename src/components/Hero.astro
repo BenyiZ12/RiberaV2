@@ -1,0 +1,56 @@
+﻿---
+import Button from '@/components/Button.astro';
+interface Props {
+  title?: string;
+  subtitle?: string;
+  image?: string;
+  imageAlt?: string;
+}
+---
+
+<section class="relative h-screen min-h-[700px] w-full overflow-hidden flex items-center justify-center reveal-image">
+  <div class="absolute inset-0 z-0">
+    <img
+      src="/og-image.svg"
+      alt="Centro Ecológico La Ribera"
+      class="w-full h-full object-cover"
+      decoding="async"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-forest/55 via-transparent to-warm/40 pointer-events-none" />
+  </div>
+
+  <div class="container relative z-10 px-6 lg:px-10 text-center">
+    <div class="kicker max-w-md mx-auto mb-6">
+      <span>Centro Ecológico La Ribera</span>
+      <span class="kicker-line"></span>
+    </div>
+    <h1 class="mb-8 md:mb-12 tracking-tight leading-none">
+      Naturaleza que se convierte en experiencia
+    </h1>
+    <p class="text-lg md:text-xl text-ivory/95 max-w-2xl mx-auto leading-relaxed mb-12 font-body">
+      Cabañas, piscinas, zonas verdes y senderos en Mollejones de Platanares, Pérez Zeledón, Costa Rica. Un descanso auténtico en contacto con la naturaleza.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <Button variant="primary" as="a" href="/hospedaje" label="Descubrir La Ribera" />
+      <Button variant="outline" as="a" href="/ubicacion" label="Consultar disponibilidad" />
+    </div>
+  </div>
+
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 animate-bounce text-forest/60">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>
+
+<style>
+  .animate-bounce {
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(-25%) translateX(-50%); animation-timing-function: cubic-bezier(0.8,0,1,1); }
+    50% { transform: translateY(0) translateX(-50%); animation-timing-function: cubic-bezier(0,0,0.2,1); }
+  }
+</style>
+

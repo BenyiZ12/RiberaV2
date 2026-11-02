@@ -1,0 +1,96 @@
+﻿---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SectionHead from '@/components/SectionHead.astro';
+import ImagePlaceholder from '@/components/ImagePlaceholder.astro';
+import Button from '@/components/Button.astro';
+import { SITE } from '@/config/site';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'LodgingBusiness',
+  name: SITE.name,
+  url: 'https://www.laribera.cr/hospedaje',
+  description: 'Cabañas y hospedaje rural en Centro Ecológico La Ribera, Mollejones de Platanares, Pérez Zeledón, Costa Rica.',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Pérez Zeledón',
+    addressCountry: 'Costa Rica',
+  },
+};
+---
+
+<BaseLayout
+  title="Hospedaje"
+  description="Cabañas y hospedaje rural en Centro Ecológico La Ribera, Mollejones de Platanares, Pérez Zeledón, Costa Rica."
+  canonical="/hospedaje"
+  structuredData={structuredData}
+>
+  <section class="section">
+    <div class="container">
+      <SectionHead
+        kicker="Hospedaje"
+        title="Cabañas y descanso rural"
+        subtitle="Hospedaje pensado para familias, parejas y grupos que buscan tranquilidad y contacto con la naturaleza."
+        divider="leaf"
+      />
+
+      <div class="grid md:grid-cols-3 gap-10 mt-20">
+        <article class="reveal glass p-8 rounded-organic flex flex-col border border-white/70 hover:border-forest/40 transition-colors duration-300 group">
+          <div class="reveal-image mb-6">
+            <ImagePlaceholder src="" alt="Cabaña estándar en La Ribera" ratio="4-3" />
+          </div>
+          <h3 class="text-2xl md:text-3xl font-display mb-3">Cabaña estándar</h3>
+          <p class="text-forest/80 font-body leading-relaxed mb-6 flex-1">
+            Espacio acogedor para descanso en pareja o pequeña familia, rodeado de vegetación.
+          </p>
+          <ul class="space-y-3 mb-8 text-sm font-body text-forest/70">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-earth"></span> Vista al jardín</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-earth"></span> Baño privado</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-earth"></span> Cama matrimonial</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-earth"></span> Ventilador</li>
+          </ul>
+          <Button variant="outline" as="a" href="/ubicacion" label="Consultar disponibilidad" />
+        </article>
+        <article class="reveal glass p-8 rounded-organic flex flex-col border border-white/70 hover:border-forest/40 transition-colors duration-300 group">
+          <div class="reveal-image mb-6">
+            <ImagePlaceholder src="" alt="Cabaña familiar en La Ribera" ratio="4-3" />
+          </div>
+          <h3 class="text-2xl md:text-3xl font-display mb-3">Cabaña familiar</h3>
+          <p class="text-forest/80 font-body leading-relaxed mb-6 flex-1">
+            Más espacio para grupos y familias, con áreas comunes y cercanía a las zonas verdes.
+          </p>
+          <ul class="space-y-3 mb-8 text-sm font-body text-forest/70">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-earth"></span> Vista a zonas verdes</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-earth"></span> Baño privado</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-earth"></span> Múltiples camas</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-earth"></span> Espacio exterior</li>
+          </ul>
+          <Button variant="outline" as="a" href="/ubicacion" label="Consultar disponibilidad" />
+        </article>
+        <article class="reveal glass p-8 rounded-organic flex flex-col border border-white/70 hover:border-forest/40 transition-colors duration-300 group">
+          <div class="reveal-image mb-6">
+            <ImagePlaceholder src="" alt="Cabaña grupo en La Ribera" ratio="4-3" />
+          </div>
+          <h3 class="text-2xl md:text-3xl font-display mb-3">Cabaña grupo</h3>
+          <p class="text-forest/80 font-body leading-relaxed mb-6 flex-1">
+            Ideal para grupos de amigos, con capacidad ampliada y cercanía a áreas de compartir.
+          </p>
+          <ul class="space-y-3 mb-8 text-sm font-body text-forest/70">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-earth"></span> Vista al entorno</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-earth"></span> Baños privados</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-earth"></span> Capacidad grupo</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-earth"></span> Terraza</li>
+          </ul>
+          <Button variant="outline" as="a" href="/ubicacion" label="Consultar disponibilidad" />
+        </article>
+      </div>
+
+      <div class="mt-24 lg:mt-32 border-t border-forest/20 pt-16">
+        <p class="text-lg text-forest/80 max-w-xl mx-auto text-center leading-relaxed">
+          Las categorías, capacidades, comodidades y disponibilidad de las cabañas deben confirmarse directamente con Centro Ecológico La Ribera. Contáctanos para información actualizada.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

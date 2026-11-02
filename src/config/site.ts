@@ -33,8 +33,6 @@ export const CONTACT = {
   phone: null,
   whatsapp: null,
   email: null, // por confirmar
-  // Teléfono de referencia visible SOLO si el propietario lo confirma:
-  // phone: '+506 000 0000',
 };
 
 export const SOCIAL = {

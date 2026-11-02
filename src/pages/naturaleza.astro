@@ -1,0 +1,78 @@
+﻿---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import SectionHead from '@/components/SectionHead.astro';
+import ImagePlaceholder from '@/components/ImagePlaceholder.astro';
+import Button from '@/components/Button.astro';
+import CTASection from '@/components/CTASection.astro';
+import Divider from '@/components/Divider.astro';
+---
+
+<BaseLayout
+  title="Naturaleza y experiencias"
+  description="Zonas verdes, piscinas, senderos y entorno natural de Centro Ecológico La Ribera en Pérez Zeledón, Costa Rica."
+  canonical="/naturaleza"
+>
+  <section class="section relative overflow-hidden">
+    <div class="container relative z-10">
+      <SectionHead
+        kicker="Naturaleza"
+        title="Entorno natural de La Ribera"
+        subtitle="Zonas verdes, piscinas, árboles nativos y senderos para caminar y observar la flora y fauna del sur de Costa Rica."
+        divider="river"
+      />
+
+      <div class="grid md:grid-cols-2 gap-16 lg:gap-24 items-center mt-20">
+        <div class="reveal">
+          <h3 class="text-3xl md:text-4xl font-display mb-6 tracking-tight">Piscinas y zonas verdes</h3>
+          <p class="text-lg md:text-xl text-forest/90 leading-relaxed mb-8">
+            Disfruta del agua y del aire libre en nuestras piscinas rodeadas de vegetación. Espacios diseñados para el descanso y el encuentro en familia o con amigos.
+          </p>
+          <ul class="space-y-5 font-body">
+            <li class="flex items-start gap-3">
+              <span class="text-earth mt-0.5">🏊</span>
+              <span class="text-forest/90">Piscinas en medio de la naturaleza</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-earth mt-0.5">🌳</span>
+              <span class="text-forest/90">Zonas verdes para descansar</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-earth mt-0.5">🦋</span>
+              <span class="text-forest/90">Flora y fauna del sur de Costa Rica</span>
+            </li>
+          </ul>
+        </div>
+        <div class="reveal-image parallax" data-parallax data-speed="0.06">
+          <ImagePlaceholder src="" alt="Piscinas y zonas verdes de La Ribera" ratio="4-3" class="shadow-2xl" />
+        </div>
+      </div>
+
+      <Divider style="river" class="my-24 lg:my-32" />
+
+      <h3 class="text-3xl md:text-4xl font-display mb-10 tracking-tight text-center">Senderos y entorno</h3>
+      <div class="grid md:grid-cols-3 gap-8 mt-12">
+        <div class="reveal glass p-8 rounded-organic border border-white/70 hover:bg-white/80 transition-colors">
+          <h4 class="text-xl font-display mb-3">Caminatas</h4>
+          <p class="text-forest/80 font-body text-sm leading-relaxed">Senderos para recorrer a pie y observar el entorno natural.</p>
+        </div>
+        <div class="reveal glass p-8 rounded-organic border border-white/70 hover:bg-white/80 transition-colors">
+          <h4 class="text-xl font-display mb-3">Observación</h4>
+          <p class="text-forest/80 font-body text-sm leading-relaxed">Espacios ideales para observar aves y vida silvestre local.</p>
+        </div>
+        <div class="reveal glass p-8 rounded-organic border border-white/70 hover:bg-white/80 transition-colors">
+          <h4 class="text-xl font-display mb-3">Descanso</h4>
+          <p class="text-forest/80 font-body text-sm leading-relaxed">Áreas sombreadas bajo árboles nativos para relajarse.</p>
+        </div>
+      </div>
+
+      <CTASection
+        title="Planifica tu visita a La Ribera"
+        subtitle="Contáctanos para coordinar tu llegada y conocer las opciones de hospedaje."
+        primaryLabel="Consultar disponibilidad"
+        primaryHref="/ubicacion"
+        align="center"
+      />
+    </div>
+  </section>
+</BaseLayout>
+
