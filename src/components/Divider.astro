@@ -1,0 +1,23 @@
+---
+interface Props {
+  style?: 'line' | 'leaf' | 'river';
+}
+</template>
+
+<div class="divider my-16 lg:my-24 flex items-center justify-center">
+  {Astro.props.style === 'river' && (
+    <svg class="w-40 h-4 text-forest/20" viewBox="0 0 120 16" fill="none">
+      <path d="M2 8 Q30 2 58 8 T118 8" stroke="#173D30" strokeWidth="1.2" fill="none" />
+    </svg>
+  )}
+  {Astro.props.style === 'leaf' && (
+    <svg class="w-12 h-12 text-earth" viewBox="0 0 32 32" fill="none">
+      <path d="M16 2C8.82 2 3 7.82 3 15c0 3.47 1.33 6.65 3.47 9.03L6.5 27l10.5-4.5L28.5 27l-2.5-3.47C28.67 21.65 30 18.47 30 15c0-7.18-5.82-13-13-13z" stroke="#A77D58" strokeWidth="1.4" fill="none" />
+    </svg>
+  )}
+  {Astro.props.style === 'line' && (
+    <div class="w-32 h-[1px] bg-forest/30" />
+  )}
+</div>
+
+</template>

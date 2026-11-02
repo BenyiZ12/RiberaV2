@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+  }
+
+  body {
+    @apply bg-warm text-forest antialiased;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display text-forest tracking-tighter;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-none;
+    line-height: 1.05;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+
+  p {
+    @apply text-lg md:text-xl leading-relaxed text-forest/90;
+  }
+
+  a {
+    @apply text-earth underline decoration-earth/40 underline-offset-4 transition-colors duration-300;
+    text-underline-offset: 4px;
+  }
+
+  a:hover {
+    @apply text-forest decoration-forest/60;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline outline-2 outline-forest outline-offset-3 rounded-sm;
+  }
+
+  ::selection {
+    @apply bg-earth text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-warm;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-moss/60 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-moss;
+  }
+
+  /* Reducir movimiento para accesibilidad (prefers-reduced-motion) */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-6 lg:px-10;
+    max-width: 1320px;
+  }
+
+  .section {
+    @apply py-20 lg:py-32 relative;
+  }
+
+  .glass {
+    @apply bg-white/55 backdrop-blur-md border border-white/70 shadow-sm;
+  }
+
+  .glass-strong {
+    @apply bg-forest/5 backdrop-blur-md border border-forest/20;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-transparent px-8 py-4 text-base font-body font-semibold uppercase tracking-wider transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply btn bg-forest text-ivory hover:bg-moss hover:text-forest shadow-[0_20px_40px_-12px_rgba(23,61,48,0.35)];
+  }
+
+  .btn-primary:active {
+    @apply scale-95;
+  }
+
+  .btn-outline {
+    @apply btn border-forest/30 text-forest hover:bg-forest hover:text-ivory;
+  }
+
+  .btn-ghost {
+    @apply btn border-transparent text-forest/70 hover:bg-forest/10 hover:text-forest;
+  }
+
+  .eyebrow {
+    @apply text-earth font-body font-semibold uppercase tracking-[0.22em] text-sm md:text-base;
+  }
+
+  .kicker {
+    @apply inline-flex items-center gap-2 mb-3;
+  }
+
+  .kicker-line {
+    @apply h-[1px] w-16 bg-earth rounded-full;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(34px);
+    transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1),
+      transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .reveal.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-image {
+    overflow: hidden;
+  }
+
+  .reveal-image img {
+    transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: scale(1.05);
+  }
+
+  .reveal-image.is-revealed img {
+    transform: scale(1);
+  }
+
+  .parallax {
+    will-change: transform;
+  }
+}

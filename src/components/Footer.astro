@@ -1,0 +1,112 @@
+---
+import { SITE, CONTACT, SOCIAL } from '@/config/site';
+import Button from '@/components/Button.astro';
+---
+
+<footer class="bg-forest text-ivory pt-24 pb-12 md:pt-32 md:pb-16">
+  <div class="container">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+      <div class="md:col-span-5">
+        <div class="flex items-center gap-2 mb-6">
+          <svg class="w-7 h-7 text-river" viewBox="0 0 32 32" fill="none">
+            <path d="M16 2C8.82 2 3 7.82 3 15c0 3.47 1.33 6.65 3.47 9.03L6.5 27l10.5-4.5L28.5 27l-2.5-3.47C28.67 21.65 30 18.47 30 15c0-7.18-5.82-13-13-13zM16 26c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7zM12 11c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zM20 11c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z" fill="#8BAFA6" />
+            <circle cx="16" cy="26" r="1" fill="#A77D58" />
+          </svg>
+          <span class="font-display text-xl font-semibold text-ivory tracking-tight italic">La Ribera</span>
+        </div>
+        <p class="text-river/80 leading-relaxed max-w-lg">
+          Centro de ecoturismo y hospedaje rural en Mollejones de Platanares,
+          Pérez Zeledón, Costa Rica. Naturaleza, descanso y hospitalidad
+          auténtica del sur del país.
+        </p>
+        {CONTACT.email && (
+          <p class="mt-6 text-river/70 font-body text-sm">
+            <a href={`mailto:${CONTACT.email}`} class="text-ivory underline underline-offset-2 hover:text-river">
+              {CONTACT.email}
+            </a>
+          </p>
+        )}
+      </div>
+
+      <div class="md:col-span-3">
+        <h3 class="text-ivory font-display text-xl mb-6">Explorar</h3>
+        <ul class="space-y-4 text-river/70 font-body text-sm">
+          <li><a href="/" class="hover:text-river transition-colors">Inicio</a></li>
+          <li><a href="/hospedaje" class="hover:text-river transition-colors">Hospedaje</a></li>
+          <li><a href="/naturaleza" class="hover:text-river transition-colors">Naturaleza</a></li>
+          <li><a href="/restaurante" class="hover:text-river transition-colors">Restaurante</a></li>
+          <li><a href="/galeria" class="hover:text-river transition-colors">Galería</a></li>
+          <li><a href="/ubicacion" class="hover:text-river transition-colors">Ubicación</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-4">
+        <h3 class="text-ivory font-display text-xl mb-6">Contacto</h3>
+        <ul class="space-y-4 text-river/70 font-body text-sm">
+          <li class="flex items-start gap-3">
+            <span class="text-river/50 mt-0.5">📍</span>
+            <span>{SITE.location}</span>
+          </li>
+          {CONTACT.phone && (
+            <li class="flex items-start gap-3">
+              <span class="text-river/50 mt-0.5">📞</span>
+              <a href={`tel:${CONTACT.phone}`} class="text-river hover:text-river transition-colors">{CONTACT.phone}</a>
+            </li>
+          )}
+          {CONTACT.whatsapp && (
+            <li class="flex items-start gap-3 inline-flex items-center gap-2">
+              <span class="text-river/50 mt-0.5">💬</span>
+              <a
+                href={`https://wa.me/${CONTACT.whatsapp.replace(/[^0-9]/g, '')}}`}
+                class="text-river hover:text-river transition-colors"
+              >
+                WhatsApp
+              </a>
+            </li>
+          )}
+          {!CONTACT.phone && !CONTACT.whatsapp && (
+            <li class="text-river/50 italic text-xs">
+              Datos de contacto por confirmar con el propietario.
+            </li>
+          )}
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-forest/30 pt-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <p class="text-river/50 text-sm font-body">
+        © {new Date().getFullYear()} Centro Ecológico La Ribera. Todos los derechos
+        reservados.
+      </p>
+      <div class="flex items-center gap-6">
+        {SOCIAL.instagram && (
+          <a
+            href={SOCIAL.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-river/50 hover:text-river transition-colors"
+            aria-label="Instagram"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm0 22c-5.514 0-10-4.486-10-10S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16z"/><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/><path d="M16.5 16.5a1.5 1.5 0 110-3 1.5 1.5 0 000 3z"/></svg>
+          </a>
+        )}
+        {SOCIAL.facebook && (
+          <a
+            href={SOCIAL.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-river/50 hover:text-river transition-colors"
+            aria-label="Facebook"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.658 9.126 8.525 9.878v-6.387h-2.538V12h2.538v-3.119c0-2.147 1.212-3.456 3.05-3.456h2.532v6.122h-3.076c-1.054 0-2.156.33-2.156 1.788v2.57h-3.578v-4.383c0-1.505 0-2.346 1.004-2.742.93-.365 2.11-.492 4.09-.492 4.452 0 7.727.247 7.727.247v4.669H19.39c-1.742 0-2.321.968-2.321 2.059v2.225z"/></svg>
+          </a>
+        )}
+        {!SOCIAL.instagram && !SOCIAL.facebook && (
+          <span class="text-river/50 text-xs italic">Redes sociales por configurar</span>
+        )}
+      </div>
+    </div>
+  </div>
+</footer>
+
+</template>
